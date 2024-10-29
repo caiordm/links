@@ -17,8 +17,7 @@
                 `Obrigado pelo interesse! logo entraremos em contato. ${name}`,
             );
         } catch (error) {
-            console.error("Error sending:", error);
-            alert("Houve um erro ao enviar, tente novamente!");
+            alert("Houve um erro. Envie um email para sprintechsoftware@gmail.com");
         }
     };
 </script>
