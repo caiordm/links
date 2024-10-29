@@ -11,7 +11,7 @@
         <li><a href="#features">Funcionalidades</a></li>
         <li><a href="#how">Como funciona</a></li>
         <li><a href="#about">Sobre</a></li>
-        <li class="list-none"><a href="#iniciar" class="text-xl p-6 pt-3 pb-3 bg-zinc-800 rounded-lg text-white flex items-center justify-center font-medium">Em Breve...</a></li>
+        <li class="list-none"><a href="#antecipado" class="text-xl p-6 pt-3 pb-3 bg-purple-950 rounded-lg text-white flex items-center justify-center font-medium animate-pulse">Acesso antecipado</a></li>
     </ul>
     <div class="hamburguer-icon">
         <Hamburger class="hamburguer-icon" title="Toggle nav links" ariaControls="nav" type="spring" --layer-spacing="8px" --layer-height="2px" --border-radius="10px" --color="black" bind:open  />
