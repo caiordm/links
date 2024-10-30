@@ -130,5 +130,5 @@
 
 <section id="antecipado" class="pb-14 container mx-auto px-4 flex flex-col items-center justify-center">
   <h2 class="text-3xl font-bold text-center mb-12">Acesso antecipado</h2>
-  <Form></Form>
+  <div data-tf-live="01JBDNDVCFRKEP8X6JFN6M7F6M"></div><script src="//embed.typeform.com/next/embed.js"></script>
 </section>

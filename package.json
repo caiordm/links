@@ -19,6 +19,7 @@
 	"dependencies": {
 		"@sendgrid/mail": "^8.1.4",
 		"@tabler/icons-svelte": "^3.20.0",
+		"mailersend": "^2.3.0",
 		"svelte-hamburgers": "^5.0.0"
 	}
 }
