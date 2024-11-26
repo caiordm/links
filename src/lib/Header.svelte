@@ -1,17 +1,17 @@
 <script>
     import { Hamburger } from "svelte-hamburgers";
     import Menu from "./Menu.svelte";
-    import logo from "../images/logo.png"
+    import logo from "../images/logol.png"
     let open = $state(false);
 </script>
 
-<div id="header-component" class="w-full flex items-center justify-between p-4 pl-8 pr-8 lg:pl-16 lg:pr-16 text-zinc-700">
+<div id="header-component" class="w-full flex items-center justify-between p-4 pl-8 pr-8 lg:pl-16 lg:pr-16 text-zinc-700 {open ? 'bg-zinc-50' : ''}">
     <img src={logo} alt="Sprintech Logo" title="Sprintech Logo" class="max-w-12" />
     <ul class="flex items-center gap-2 lg:gap-4 text-base lg:text-xl font-normal">
         <li><a href="#features">Funcionalidades</a></li>
         <li><a href="#how">Como funciona</a></li>
         <li><a href="#about">Sobre</a></li>
-        <li class="list-none"><a href="#antecipado" class="text-xl p-6 pt-3 pb-3 bg-purple-950 rounded-lg text-white flex items-center justify-center font-medium animate-pulse">Acesso antecipado</a></li>
+        <li class="list-none"><a href="#antecipado" class="text-xl p-6 pt-3 pb-3 bg-amber-700 rounded-lg text-white flex items-center justify-center font-medium animate-pulse">Acesso antecipado</a></li>
     </ul>
     <div class="hamburguer-icon">
         <Hamburger class="hamburguer-icon" title="Toggle nav links" ariaControls="nav" type="spring" --layer-spacing="8px" --layer-height="2px" --border-radius="10px" --color="black" bind:open  />

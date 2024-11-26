@@ -1,63 +1,82 @@
 <script>
-  import {
-    IconLayout,
-    IconBrush,
-    IconDeviceMobile,
-    IconBolt,
-  } from "@tabler/icons-svelte";
-  import Form from "../lib/Form.svelte";
+  import Footer from "$lib/Footer.svelte";
+  import Header from "$lib/Header.svelte";
+import {
+  IconLayout,
+  IconBrush,
+  IconDeviceMobile,
+  IconBolt,
+} from "@tabler/icons-svelte";
+  import { onMount } from "svelte";
 
-  const features = [
-    {
-      icon: "Layout",
-      title: "Editor Intuitivo",
-      description:
-        "Arrange facilmente os itens da sua página com nosso editor intuitivo.",
-    },
-    {
-      icon: "Brush",
-      title: "Design Customizável",
-      description:
-        "Personalize cada parte da sua página da forma que achar melhor.",
-    },
-    {
-      icon: "DeviceMobile",
-      title: "Responsivo para dispositivos móveis",
-      description:
-        "Sua página funciona bem em qualquer dispositivo, seja num computador um smartphone",
-    },
-    {
-      icon: "Bolt",
-      title: "Lançamento Rápido",
-      description: "Veja sua página no ar após pouco tempo.",
-    },
-  ];
+const features = [
+  {
+    icon: "Layout",
+    title: "Editor Intuitivo",
+    description:
+      "Arrange facilmente os itens da sua página com nosso editor intuitivo.",
+  },
+  {
+    icon: "Brush",
+    title: "Design Customizável",
+    description:
+      "Personalize cada parte da sua página da forma que achar melhor.",
+  },
+  {
+    icon: "DeviceMobile",
+    title: "Responsivo para dispositivos móveis",
+    description:
+      "Sua página funciona bem em qualquer dispositivo, seja num computador um smartphone",
+  },
+  {
+    icon: "Bolt",
+    title: "Lançamento Rápido",
+    description: "Veja sua página no ar após pouco tempo.",
+  },
+];
 
-  const steps = [
-    {
-      step: 1,
-      title: "Escolha um template",
-      description: "Comece com o nosso template para poupar seu esforço.",
-    },
-    {
-      step: 2,
-      title: "Customize sua página",
-      description:
-        "Adicione seu conteúdo, ajuste da forma que preferir e estilize de acordo com a sua marca",
-    },
-    {
-      step: 3,
-      title: "Publique",
-      description:
-        "Após revisar todos os detalhes, publique sua página com um simples clique!",
-    },
-  ];
+const steps = [
+  {
+    step: 1,
+    title: "Escolha um template",
+    description: "Comece com o nosso template para poupar seu esforço.",
+  },
+  {
+    step: 2,
+    title: "Customize sua página",
+    description:
+      "Adicione seu conteúdo, ajuste da forma que preferir e estilize de acordo com a sua marca",
+  },
+  {
+    step: 3,
+    title: "Publique",
+    description:
+      "Após revisar todos os detalhes, publique sua página com um simples clique!",
+  },
+];
+
+let isScrolled = $state(false);
+
+onMount(() => {
+  const handleScroll = () => {
+    isScrolled = window.scrollY > 10;
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+});
 </script>
+
+<main class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+<header class="{isScrolled ? 'bg-gray-50 shadow-md fixed top-0 left-0 right-0 z-50 transition-all duration-300' : ''}"><Header></Header></header>
 
 <section id="home" class="pt-16 lg:pt-32 pb-20 px-4">
   <div class="container mx-auto text-center">
     <h1
-      class="text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-950 to-purple-500"
+      class="text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-amber-700 to-amber-500"
     >
       Crie um site profissional e personalizado sem complicações. É fácil,
       É rápido!
@@ -67,8 +86,8 @@
       conhecimentos técnicos, com nossa plataforma, você tem o controle total
       sobre o seu site.
     </p>
-    <a href="#antecipado" class="bg-purple-800 p-4 rounded-md text-lg text-white animate-bounce">
-      Tenha acesso antecipado
+    <a href="#antecipado" class="bg-amber-600 p-4 rounded-md text-lg text-white animate-pulse">
+      Acesso antecipado
     </a>
   </div>
 </section>
@@ -114,7 +133,7 @@
       {#each steps as item}
         <div class="flex items-start mb-8">
           <div
-            class="flex-shrink-0 w-12 h-12 rounded-full { item.step == 1 ? 'bg-purple-600' : ''} { item.step == 2 ? 'bg-purple-800' : ''} { item.step == 3 ? 'bg-purple-950' : ''} text-white flex items-center justify-center text-xl font-bold mr-4"
+            class="flex-shrink-0 w-12 h-12 rounded-full { item.step == 1 ? 'bg-amber-500' : ''} { item.step == 2 ? 'bg-amber-600' : ''} { item.step == 3 ? 'bg-amber-700' : ''} text-white flex items-center justify-center text-xl font-bold mr-4"
           >
             {item.step}
           </div>
@@ -132,3 +151,9 @@
   <h2 class="text-3xl font-bold text-center mb-12">Acesso antecipado</h2>
   <div data-tf-live="01JBDNDVCFRKEP8X6JFN6M7F6M"></div><script src="//embed.typeform.com/next/embed.js"></script>
 </section>
+
+<footer class="bg-zinc-800 text-white py-12"><Footer></Footer></footer>
+</main>
+
+
+

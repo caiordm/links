@@ -8,6 +8,6 @@
         <li><a href="#features">Funcionalidades</a></li>
         <li><a href="#how">Como funciona</a></li>
         <li><a href="#about">Sobre</a></li>
-        <li class="list-none"><a href="#antecipado" class="text-xl p-6 pt-3 pb-3 bg-zinc-800 rounded-lg text-white flex items-center justify-center font-medium">Acesso antecipado</a></li>
+        <li class="list-none"><a href="#antecipado" class="text-xl p-6 pt-3 pb-3 bg-amber-700 rounded-lg text-white flex items-center justify-center font-medium">Acesso antecipado</a></li>
     </ul>
 {/if}
