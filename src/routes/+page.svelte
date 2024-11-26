@@ -92,7 +92,7 @@ onMount(() => {
   </div>
 </section>
 
-<section id="features" class="py-20 bg-gray-50">
+<section id="features" class="py-20">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl text-zinc-700 font-bold text-center mb-12">
       Nossas funcionalidades
